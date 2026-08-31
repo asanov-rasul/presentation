@@ -1,0 +1,128 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Unbounded", "Manrope", system-ui, sans-serif;
+  --font-sans: "Manrope", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+
+  --color-bg: #0a0a0a;
+  --color-fg: #f2f0ea;
+  --color-muted: #8a8882;
+  --color-accent: #ff2d1a;
+  --color-surface: #141414;
+  --color-line: #2c2c2a;
+  --color-paper: #e7e2d6;
+  --color-ink: #111110;
+
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+
+  --text-kicker: clamp(0.7rem, 0.55rem + 0.4vw, 0.85rem);
+  --text-caption: clamp(0.8rem, 0.7rem + 0.35vw, 0.95rem);
+  --text-body: clamp(1rem, 0.9rem + 0.4vw, 1.2rem);
+  --text-title: clamp(1.35rem, 0.8rem + 1.6vw, 2.35rem);
+  --text-display: clamp(2.1rem, 1rem + 4.2vw, 5.5rem);
+  --text-hero: clamp(2.6rem, 1.1rem + 6.2vw, 8.2rem);
+
+  --leading-tight: 0.92;
+  --leading-snug: 1.15;
+  --leading-body: 1.5;
+
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --motion-quick: 150ms;
+  --motion-fast: 250ms;
+  --motion-slow: 400ms;
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: var(--color-bg);
+    color: var(--color-fg);
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+}
+
+.grain {
+  position: relative;
+}
+
+.slide-enter {
+  animation: rise var(--motion-slow) var(--ease-out) both;
+}
+
+.stagger-item {
+  animation: rise var(--motion-slow) var(--ease-out) both;
+}
+
+.stagger-item:nth-child(1) {
+  animation-delay: 0ms;
+}
+.stagger-item:nth-child(2) {
+  animation-delay: 80ms;
+}
+.stagger-item:nth-child(3) {
+  animation-delay: 160ms;
+}
+.stagger-item:nth-child(4) {
+  animation-delay: 240ms;
+}
+.stagger-item:nth-child(5) {
+  animation-delay: 320ms;
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+    filter: blur(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+.poster-bad {
+  background: #f4e445;
+  color: #1a0a4a;
+  font-family: var(--font-sans);
+  box-shadow: 6px 6px 0 #ff2d8a;
+}
+
+.poster-bad .burst {
+  color: #ff2d8a;
+  text-shadow:
+    3px 3px 0 #3d7dff,
+    -2px -2px 0 #fff;
+}
+
+.poster-bad .badge-new {
+  background: #3d7dff;
+  color: #f2f0ea;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .slide-enter,
+  .stagger-item {
+    animation: none !important;
+  }
+}
