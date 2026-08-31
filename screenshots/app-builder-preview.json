@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "Система",
+      "hasCanvas": false,
+      "bodyTextLen": 196,
+      "bodyTextHash": "75742f6520217f463c97d352fd03952575fbbdc1322aaa48ed91e65f67acaf22",
+      "bodyTextPrefix": "01 / 15 ПРОБНЫЙ УРОК 12 минут · затем руки в Photoshop Не талант",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Система",
+      "hasCanvas": false,
+      "bodyTextLen": 176,
+      "bodyTextHash": "798ed323f17338810d8c586f9f8d9424627f9088819c917a15fa64450e1e1a71",
+      "bodyTextPrefix": "01 / 15 ПРОБНЫЙ УРОК 12 минут · затем руки в Photoshop Не талант",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-preview.json"
+}
