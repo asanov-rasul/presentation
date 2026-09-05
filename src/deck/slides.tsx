@@ -173,7 +173,7 @@ function MythSlide() {
     <div className="flex h-full flex-col justify-between">
       <Kicker>ещё один миф</Kicker>
       <blockquote className="stagger-item max-w-5xl font-display text-display leading-tight">
-        «Мне поздно.
+        «У меня нет таланта.
         <br />
         Я не творческий.
         <br />
